@@ -1,0 +1,433 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * SAP Classic / Fiori-inspired enterprise design system.
+ * Compact density, neutral cool-grey palette, subtle blue accent,
+ * near-square corners, thin borders, small typography.
+ */
+
+@theme inline {
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+  --radius-2xl: 8px;
+  --radius-3xl: 10px;
+  --radius-4xl: 12px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: "Segoe UI", "72", "72full", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+:root {
+  --radius: 3px;
+  --background: oklch(0.985 0.002 240);
+  --foreground: oklch(0.20 0.02 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.20 0.02 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.20 0.02 250);
+  --primary: oklch(0.48 0.11 240);
+  --primary-foreground: oklch(0.99 0.003 240);
+  --secondary: oklch(0.955 0.006 240);
+  --secondary-foreground: oklch(0.22 0.02 250);
+  --muted: oklch(0.955 0.006 240);
+  --muted-foreground: oklch(0.48 0.02 250);
+  --accent: oklch(0.94 0.015 240);
+  --accent-foreground: oklch(0.22 0.02 250);
+  --destructive: oklch(0.55 0.20 27);
+  --destructive-foreground: oklch(0.985 0.003 248);
+  --border: oklch(0.88 0.008 250);
+  --input: oklch(0.90 0.008 250);
+  --ring: oklch(0.55 0.11 240);
+  --chart-1: oklch(0.55 0.14 240);
+  --chart-2: oklch(0.60 0.12 185);
+  --chart-3: oklch(0.55 0.15 30);
+  --chart-4: oklch(0.65 0.15 85);
+  --chart-5: oklch(0.55 0.18 300);
+  --sidebar: oklch(0.34 0.02 250);
+  --sidebar-foreground: oklch(0.97 0.003 240);
+  --sidebar-primary: oklch(0.55 0.14 240);
+  --sidebar-primary-foreground: oklch(0.99 0.003 240);
+  --sidebar-accent: oklch(0.42 0.02 250);
+  --sidebar-accent-foreground: oklch(0.99 0.003 240);
+  --sidebar-border: oklch(0.28 0.02 250);
+  --sidebar-ring: oklch(0.55 0.14 240);
+}
+
+.dark {
+  --background: oklch(0.16 0.015 250);
+  --foreground: oklch(0.96 0.003 248);
+  --card: oklch(0.21 0.018 250);
+  --card-foreground: oklch(0.96 0.003 248);
+  --popover: oklch(0.21 0.018 250);
+  --popover-foreground: oklch(0.96 0.003 248);
+  --primary: oklch(0.70 0.13 240);
+  --primary-foreground: oklch(0.16 0.015 250);
+  --secondary: oklch(0.26 0.02 250);
+  --secondary-foreground: oklch(0.96 0.003 248);
+  --muted: oklch(0.26 0.02 250);
+  --muted-foreground: oklch(0.70 0.02 250);
+  --accent: oklch(0.30 0.02 250);
+  --accent-foreground: oklch(0.98 0.003 248);
+  --destructive: oklch(0.70 0.19 22);
+  --destructive-foreground: oklch(0.985 0.003 248);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.55 0.11 240);
+  --chart-1: oklch(0.55 0.20 240);
+  --chart-2: oklch(0.70 0.17 162);
+  --chart-3: oklch(0.77 0.19 70);
+  --chart-4: oklch(0.63 0.26 304);
+  --chart-5: oklch(0.65 0.25 16);
+  --sidebar: oklch(0.20 0.02 250);
+  --sidebar-foreground: oklch(0.96 0.003 248);
+  --sidebar-primary: oklch(0.55 0.16 240);
+  --sidebar-primary-foreground: oklch(0.99 0.003 240);
+  --sidebar-accent: oklch(0.28 0.02 250);
+  --sidebar-accent-foreground: oklch(0.98 0.003 248);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.55 0.16 240);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    font-size: 13px;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- SAP Classic compact density ---------- */
+
+  /* Tables: tighter rows, thin borders, subtle header */
+  table {
+    font-size: 12px;
+  }
+  thead tr {
+    background-color: var(--color-muted);
+  }
+  th {
+    height: 28px !important;
+    padding: 2px 8px !important;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--color-muted-foreground);
+    border-bottom: 1px solid var(--color-border);
+  }
+  td {
+    padding: 4px 8px !important;
+    height: auto;
+    border-bottom: 1px solid color-mix(in oklab, var(--color-border) 60%, transparent);
+  }
+  tbody tr:hover {
+    background-color: color-mix(in oklab, var(--color-primary) 6%, transparent);
+  }
+
+  /* Inputs / buttons / selects: shorter default height */
+  button:not([data-slot="switch-thumb"]),
+  [role="button"] {
+    font-size: 12px;
+  }
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 12px;
+  }
+
+  /* Card padding compression */
+  [data-slot="card"] {
+    border-radius: var(--radius);
+  }
+  [data-slot="card-header"] {
+    padding: 10px 14px !important;
+  }
+  [data-slot="card-content"] {
+    padding: 10px 14px !important;
+  }
+  [data-slot="card-footer"] {
+    padding: 8px 14px !important;
+  }
+  [data-slot="card-title"] {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  [data-slot="card-description"] {
+    font-size: 11px;
+  }
+
+  /* Dialog / sheet compaction */
+  [data-slot="dialog-content"] {
+    padding: 14px !important;
+    border-radius: var(--radius);
+  }
+  [data-slot="dialog-title"] {
+    font-size: 14px;
+  }
+
+  /* Badges */
+  [data-slot="badge"] {
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 2px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  /* Tabs */
+  [data-slot="tabs-list"] {
+    height: 30px;
+  }
+  [data-slot="tabs-trigger"] {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  /* Scrollbars — enterprise thin */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--color-foreground) 20%, transparent);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: color-mix(in oklab, var(--color-foreground) 35%, transparent);
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Focus ring */
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 1px;
+  }
+}
+/* Selectable tracking rows and persistent rainbow labels. */
+.interactive-data-row {
+  cursor: pointer;
+}
+
+.interactive-data-row > td {
+  transition:
+    background-color 80ms ease,
+    box-shadow 80ms ease;
+}
+
+.interactive-data-row[data-row-selected="true"] > td {
+  font-size: 1.5em;
+  font-weight: 700;
+  box-shadow:
+    inset 0 2px 0 var(--primary),
+    inset 0 -2px 0 var(--primary);
+}
+
+.interactive-data-row[data-row-selected="true"] > td:first-child {
+  box-shadow:
+    inset 2px 0 0 var(--primary),
+    inset 0 2px 0 var(--primary),
+    inset 0 -2px 0 var(--primary);
+}
+
+.interactive-data-row[data-row-selected="true"] > td:last-child {
+  box-shadow:
+    inset -2px 0 0 var(--primary),
+    inset 0 2px 0 var(--primary),
+    inset 0 -2px 0 var(--primary);
+}
+
+.interactive-data-row[data-row-selected="true"]:not([data-row-label]) > td {
+  background-color: color-mix(in srgb, var(--primary) 14%, var(--card));
+}
+
+.interactive-data-row[data-row-label="red"] {
+  --row-label-bg: color-mix(in srgb, #ef4444 72%, var(--card));
+}
+
+.interactive-data-row[data-row-label="orange"] {
+  --row-label-bg: color-mix(in srgb, #f97316 72%, var(--card));
+}
+
+.interactive-data-row[data-row-label="yellow"] {
+  --row-label-bg: color-mix(in srgb, #eab308 76%, var(--card));
+}
+
+.interactive-data-row[data-row-label="green"] {
+  --row-label-bg: color-mix(in srgb, #22c55e 72%, var(--card));
+}
+
+.interactive-data-row[data-row-label="blue"] {
+  --row-label-bg: color-mix(in srgb, #3b82f6 72%, var(--card));
+}
+
+.interactive-data-row[data-row-label="indigo"] {
+  --row-label-bg: color-mix(in srgb, #6366f1 72%, var(--card));
+}
+
+.interactive-data-row[data-row-label="violet"] {
+  --row-label-bg: color-mix(in srgb, #a855f7 72%, var(--card));
+}
+
+.interactive-data-row[data-row-label] > td {
+  background-color: var(--row-label-bg);
+  color: #111827;
+}
+
+.dark .interactive-data-row[data-row-label] > td {
+  color: white;
+}
+
+.row-label-palette {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: var(--popover);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.16);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(2px);
+  transition: opacity 80ms ease;
+  vertical-align: middle;
+}
+
+.interactive-data-row:hover .row-label-palette,
+.interactive-data-row:focus-within .row-label-palette {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.row-label-swatch {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex: 0 0 auto;
+  border: 2px solid rgb(255 255 255 / 0.9);
+  border-radius: 9999px;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 0.22);
+  transition: transform 80ms ease;
+}
+
+.row-label-swatch:hover,
+.row-label-swatch:focus-visible {
+  transform: scale(1.25);
+  outline: none;
+}
+
+.row-label-swatch[data-active="true"] {
+  transform: scale(1.2);
+  box-shadow:
+    0 0 0 2px var(--popover),
+    0 0 0 4px var(--foreground);
+}
+
+.date-hover-value .date-month-name { display: none; }
+.date-hover-value:hover .date-number,
+.date-hover-value:focus-visible .date-number { display: none; }
+.date-hover-value:hover .date-month-name,
+.date-hover-value:focus-visible .date-month-name { display: inline; }
+
+.clock-face {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--border);
+  border-radius: 9999px;
+  background:
+    radial-gradient(circle at center, color-mix(in srgb, var(--primary) 10%, var(--card)) 0 45%, transparent 46%),
+    var(--card);
+  box-shadow: inset 0 0 0 5px color-mix(in srgb, var(--muted) 70%, transparent);
+}
+
+.clock-number {
+  position: absolute;
+  left: calc(50% - 9px);
+  top: calc(50% - 8px);
+  width: 18px;
+  text-align: center;
+  font-size: 9px;
+  color: var(--muted-foreground);
+  transform-origin: 9px 8px;
+}
+
+.clock-hand {
+  position: absolute;
+  left: calc(50% - 1px);
+  bottom: 50%;
+  width: 2px;
+  border-radius: 9999px;
+  transform-origin: 50% 100%;
+}
+
+.clock-hour { height: 48px; background: var(--foreground); }
+.clock-minute { height: 58px; background: var(--primary); }
+.clock-second { height: 62px; width: 1px; background: var(--destructive); }
+.clock-pin {
+  position: absolute;
+  left: calc(50% - 4px);
+  top: calc(50% - 4px);
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
